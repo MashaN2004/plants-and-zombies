@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.shooter {
+			width: 80px; 
+			position: absolute; 	
+		}
+		.box {
+			background-image: url(game.png);
+			height: 750px; 
+			background-size: 100% 100%;
+		}
+		.zombies {
+			width: 80px; 
+			position: absolute;
+			transition: 1s;
+		}
+	</style>
+</head>
+<body>	
+	
+	<div class="box" style="">
+		
+		<h5 style="position: absolute; left: 650px; top: 60px" class="score">
+			score:<span class="point"></span>
+		</h5>
+
+		<!--ГОРОХИ-->
+	    <img class="shooter" src="peashooter.png"  style="top: 200px; left: 480px;">		
+		<img class="shooter" src="peashooter.png"  style="top: 300px; left: 480px; ">	
+		<img class="shooter" src="peashooter.png"  style="top: 400px; left: 480px; ">	
+		<img class="shooter" src="peashooter.png"  style="top: 500px; left: 480px; ">
+		<img class="shooter" src="peashooter.png"  style="top: 600px; left: 480px; ">
+
+
+		<!--ЗОМБИ-->
+		<img class="zombies" src="zombie1.png" style="top: 150px; left: 1200px;">
+		<img class="zombies" src="zombie2.png" style="top: 250px; left: 1200px;">
+		<img class="zombies" src="zombie2.png" style="top: 350px; left: 1200px;">
+		<img class="zombies" src="zombie4.png" style="top: 450px; left: 1200px;">
+		<img class="zombies" src="zombie4.png" style="top: 550px; left: 1200px;">
+	</div>
+<script>
+	let shooters = document.querySelectorAll('.shooter');
+	let zombies = document.querySelectorAll('.zombies');
+	let score = 0;
+	let go1 = 1200;
+	let go2 = 1200;
+	let go3 = 1200;
+	let go4 = 1200;
+	let go5 = 1200;
+	document.querySelector('.point').innerHTML = score;
+	zombies[0].onclick = function(){
+		go1 = go1 - 100;
+		zombies[0].style.left = go1 + "px";
+		
+
+		if (go1 == 500) {
+			alert('Съеден')
+			shooters[0].style.display = 'none';
+			score = score + 1;
+			document.querySelector('.point').innerHTML = score;
+		}
+		if (score == 5){
+			zombies[0].style.display = 'none';
+			zombies[1].style.display = 'none';
+			zombies[2].style.display = 'none';
+			zombies[3].style.display = 'none';
+			zombies[4].style.display = 'none';
+		}
+	}
+	zombies[1].onclick = function(){
+		go2 = go2 - 100;
+		zombies[1].style.left = go2 + "px";
+		
+
+		if (go2 == 500) {
+			alert('Съеден')
+			shooters[1].style.display = 'none';
+			score = score + 1;
+			document.querySelector('.point').innerHTML = score;
+		}
+		if (score == 5){
+			zombies[0].style.display = 'none';
+			zombies[1].style.display = 'none';
+			zombies[2].style.display = 'none';
+			zombies[3].style.display = 'none';
+			zombies[4].style.display = 'none';
+		}
+	}
+	zombies[2].onclick = function(){
+		go3 = go3 - 100;
+		zombies[2].style.left = go3 + "px";
+		
+
+		if (go3 == 500) {
+			alert('Съеден')
+			shooters[2].style.display = 'none';
+			score = score + 1;
+			document.querySelector('.point').innerHTML = score;
+		}
+		if (score == 5){
+			zombies[0].style.display = 'none';
+			zombies[1].style.display = 'none';
+			zombies[2].style.display = 'none';
+			zombies[3].style.display = 'none';
+			zombies[4].style.display = 'none';
+		}
+	}
+	zombies[3].onclick = function(){
+		go4 = go4 - 100;
+		zombies[3].style.left = go4 + "px";
+		
+
+		if (go4 == 500) {
+			alert('Съеден')
+			shooters[3].style.display = 'none';
+			score = score + 1;
+			document.querySelector('.point').innerHTML = score;
+		}
+		if (score == 5){
+			zombies[0].style.display = 'none';
+			zombies[1].style.display = 'none';
+			zombies[2].style.display = 'none';
+			zombies[3].style.display = 'none';
+			zombies[4].style.display = 'none';
+		}
+	}
+	zombies[4].onclick = function(){
+		go5 = go5 - 100;
+		zombies[4].style.left = go5 + "px";
+		
+
+		if (go5 == 500) {
+			alert('Съеден')
+			shooters[4].style.display = 'none';
+			score = score + 1;
+			document.querySelector('.point').innerHTML = score;
+		}
+		if (score == 5){
+			zombies[0].style.display = 'none';
+			zombies[1].style.display = 'none';
+			zombies[2].style.display = 'none';
+			zombies[3].style.display = 'none';
+			zombies[4].style.display = 'none';
+		}
+	}
+
+
+
+
+
+</script>
+</body>
+</html>
